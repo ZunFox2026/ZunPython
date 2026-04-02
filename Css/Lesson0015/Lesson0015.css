@@ -1,0 +1,64 @@
+/* Bài 15: Tạo Hình Nền */
+/* Phần 1: Tạo hình nền cơ bản */
+body {
+  /* Thiết lập màu nền */
+  background-color: #f2f2f2;
+  /* Thiết lập hình nền */
+  background-image: url('background.jpg');
+  /* Thiết lập cách lặp lại hình nền */
+  background-repeat: no-repeat;
+  /* Thiết lập vị trí hình nền */
+  background-position: center;
+}
+
+/* Phần 2: Tạo hình nền với nhiều lớp */
+.container {
+  /* Thiết lập màu nền */
+  background-color: #ffffff;
+  /* Thiết lập hình nền */
+  background-image: url('background1.jpg'), url('background2.jpg');
+  /* Thiết lập cách lặp lại hình nền */
+  background-repeat: repeat, no-repeat;
+  /* Thiết lập vị trí hình nền */
+  background-position: center, top left;
+}
+
+/* Phần 3: Tạo hình nền với hiệu ứng */
+.header {
+  /* Thiết lập màu nền */
+  background-color: #333333;
+  /* Thiết lập hình nền */
+  background-image: linear-gradient(to bottom, #444444, #333333);
+  /* Thiết lập cách lặp lại hình nền */
+  background-repeat: no-repeat;
+  /* Thiết lập vị trí hình nền */
+  background-position: center;
+}
+
+/* Phần 4: Tạo hình nền với ảnh nền cố định */
+.footer {
+  /* Thiết lập màu nền */
+  background-color: #ffffff;
+  /* Thiết lập hình nền */
+  background-image: url('background3.jpg');
+  /* Thiết lập cách lặp lại hình nền */
+  background-repeat: no-repeat;
+  /* Thiết lập vị trí hình nền */
+  background-position: center;
+  /* Thiết lập ảnh nền cố định */
+  background-attachment: fixed;
+}
+
+/* Phần 5: Tạo hình nền với kích thước tự động */
+.content {
+  /* Thiết lập màu nền */
+  background-color: #f2f2f2;
+  /* Thiết lập hình nền */
+  background-image: url('background4.jpg');
+  /* Thiết lập cách lặp lại hình nền */
+  background-repeat: no-repeat;
+  /* Thiết lập vị trí hình nền */
+  background-position: center;
+  /* Thiết lập kích thước hình nền */
+  background-size: cover;
+}
