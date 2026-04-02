@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- Đây là khai báo loại tài liệu, thông báo cho trình duyệt rằng đây là một trang HTML -->
+<html>
+<!-- Thẻ html là thẻ gốc của trang web, bao gồm tất cả các phần tử khác -->
+<head>
+    <!-- Thẻ head chứa thông tin về trang web, như tiêu đề, phong cách, và các liên kết khác -->
+    <title>Tạo hiệu ứng glow cho văn bản</title>
+    <!-- Tiêu đề của trang web, xuất hiện trên thanh tiêu đề của trình duyệt -->
+    <style>
+        /* Đây là phần CSS, dùng để tạo phong cách cho trang web */
+        body {
+            /* Thiết lập màu nền cho trang web */
+            background-color: #f0f0f0;
+        }
+        .glow {
+            /* Tạo lớp glow cho văn bản */
+            font-size: 36px;
+            color: #ffffff;
+            text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4, 0 0 30px #ff69b4;
+        }
+        .no-glow {
+            /* Tạo lớp không có glow cho văn bản */
+            font-size: 36px;
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <!-- Thẻ body chứa nội dung chính của trang web -->
+    <h1>Tạo hiệu ứng glow cho văn bản</h1>
+    <!-- Tiêu đề của trang web -->
+    <p class="glow">Văn bản này có hiệu ứng glow</p>
+    <!-- Văn bản có hiệu ứng glow -->
+    <p class="no-glow">Văn bản này không có hiệu ứng glow</p>
+    <!-- Văn bản không có hiệu ứng glow -->
+    <p>Để tạo hiệu ứng glow, bạn có thể sử dụng thuộc tính text-shadow trong CSS.</p>
+    <!-- Giải thích về cách tạo hiệu ứng glow -->
+    <p>Thuộc tính text-shadow cho phép bạn tạo bóng cho văn bản, và bạn có thể điều chỉnh màu sắc, kích thước và vị trí của bóng.</p>
+    <!-- Giải thích về thuộc tính text-shadow -->
+</body>
+</html>
