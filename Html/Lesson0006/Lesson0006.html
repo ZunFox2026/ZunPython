@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!-- Khai báo loại tài liệu là HTML5 -->
+<html>
+<!-- Phần thân của tài liệu HTML -->
+<head>
+    <!-- Phần đầu của tài liệu HTML, chứa thông tin về trang web -->
+    <title>Đăng nhập</title>
+    <!-- Tiêu đề của trang web -->
+    <style>
+        /* CSS cho trang web */
+        body {
+            /* Định dạng chung cho trang web */
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .container {
+            /* Định dạng cho hộp chứa form đăng nhập */
+            width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .title {
+            /* Định dạng cho tiêu đề form đăng nhập */
+            text-align: center;
+            color: #337ab7;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            /* Định dạng cho các nhóm input trong form */
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            /* Định dạng cho nhãn của input */
+            display: block;
+            margin-bottom: 10px;
+        }
+        .form-group input {
+            /* Định dạng cho input */
+            width: 100%;
+            height: 40px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .btn {
+            /* Định dạng cho nút đăng nhập */
+            width: 100%;
+            height: 40px;
+            background-color: #337ab7;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            /* Hiệu ứng khi di chuột qua nút đăng nhập */
+            background-color: #23527c;
+        }
+    </style>
+</head>
+<body>
+    <!-- Phần nội dung của trang web -->
+    <div class="container">
+        <!-- Hộp chứa form đăng nhập -->
+        <h2 class="title">Đăng nhập</h2>
+        <!-- Tiêu đề form đăng nhập -->
+        <form>
+            <!-- Form đăng nhập -->
+            <div class="form-group">
+                <!-- Nhóm input cho tên đăng nhập -->
+                <label for="username">Tên đăng nhập:</label>
+                <input type="text" id="username" name="username" placeholder="Nhập tên đăng nhập">
+            </div>
+            <div class="form-group">
+                <!-- Nhóm input cho mật khẩu -->
+                <label for="password">Mật khẩu:</label>
+                <input type="password" id="password" name="password" placeholder="Nhập mật khẩu">
+            </div>
+            <button class="btn" type="submit">Đăng nhập</button>
+            <!-- Nút đăng nhập -->
+        </form>
+    </div>
+</body>
+</html>
