@@ -1,0 +1,71 @@
+/* Bài 34: Tìm hiểu về Media Query */
+/* Giới thiệu về Media Query: 
+  Media Query là một tính năng trong CSS giúp chúng ta có thể áp dụng các phong cách khác nhau cho một trang web dựa trên các điều kiện khác nhau như kích thước màn hình, thiết bị, hướng màn hình,... */
+
+/* Ví dụ 1: Áp dụng phong cách cho màn hình có chiều rộng tối đa 768px */
+@media (max-width: 768px) {
+  /* Thay đổi màu nền cho toàn bộ trang web */
+  body {
+    background-color: #f2f2f2;
+  }
+  /* Thay đổi kích thước phông chữ cho tiêu đề */
+  h1 {
+    font-size: 24px;
+  }
+}
+
+/* Ví dụ 2: Áp dụng phong cách cho màn hình có chiều rộng tối thiểu 1024px */
+@media (min-width: 1024px) {
+  /* Thay đổi màu nền cho toàn bộ trang web */
+  body {
+    background-color: #fff;
+  }
+  /* Thay đổi kích thước phông chữ cho tiêu đề */
+  h1 {
+    font-size: 36px;
+  }
+}
+
+/* Ví dụ 3: Áp dụng phong cách cho thiết bị di động */
+@media only screen and (max-width: 600px) {
+  /* Thay đổi hướng màn hình */
+  body {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+}
+
+/* Ví dụ 4: Áp dụng phong cách cho màn hình có chiều cao tối đa 480px */
+@media (max-height: 480px) {
+  /* Thay đổi kích thước phông chữ cho tiêu đề */
+  h1 {
+    font-size: 18px;
+  }
+}
+
+/* Ví dụ 5: Áp dụng phong cách cho màn hình có tỷ lệ khung hình 16:9 */
+@media (aspect-ratio: 16/9) {
+  /* Thay đổi màu nền cho toàn bộ trang web */
+  body {
+    background-color: #ccc;
+  }
+}
+
+/* Ví dụ 6: Áp dụng phong cách cho màn hình có hướng màn hình là ngang */
+@media (orientation: landscape) {
+  /* Thay đổi kích thước phông chữ cho tiêu đề */
+  h1 {
+    font-size: 30px;
+  }
+}
+
+/* Ví dụ 7: Áp dụng phong cách cho màn hình có hướng màn hình là dọc */
+@media (orientation: portrait) {
+  /* Thay đổi kích thước phông chữ cho tiêu đề */
+  h1 {
+    font-size: 20px;
+  }
+}
