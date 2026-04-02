@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- Định nghĩa loại tài liệu HTML5 -->
+<html>
+<!-- Phần đầu của tài liệu, chứa thông tin về trang web -->
+<head>
+    <!-- Tiêu đề của trang web -->
+    <title>Tạo hiệu ứng Loading</title>
+    <!-- Liên kết đến các tệp CSS và JavaScript ngoài -->
+    <!-- CSS viết trong thẻ style -->
+    <style>
+        /* Định nghĩa màu sắc và phong cách cho trang web */
+        body {
+            font-family: Arial, sans-serif; /* chọn font cho trang web */
+            background-color: #f0f0f0; /* màu nền của trang web */
+        }
+        
+        /* Tạo hiệu ứng loading */
+        .loading {
+            position: absolute; /* đặt vị trí tuyệt đối */
+            top: 50%; /* đặt ở giữa theo chiều dọc */
+            left: 50%; /* đặt ở giữa theo chiều ngang */
+            transform: translate(-50%, -50%); /* điều chỉnh vị trí */
+            font-size: 24px; /* cỡ chữ */
+            color: #007bff; /* màu chữ */
+            animation: loading 2s linear infinite; /* hiệu ứng loading */
+        }
+        
+        /* Định nghĩa hiệu ứng loading */
+        @keyframes loading {
+            0% {
+                content: "Đang tải...";
+            }
+            25% {
+                content: "Đang tải..";
+            }
+            50% {
+                content: "Đang tải.";
+            }
+            75% {
+                content: "Đang tải..";
+            }
+            100% {
+                content: "Đang tải...";
+            }
+        }
+    </style>
+</head>
+<!-- Phần thân của tài liệu, chứa nội dung của trang web -->
+<body>
+    <!-- Tạo hiệu ứng loading -->
+    <div class="loading">Đang tải...</div>
+    <!-- Thêm một đoạn văn để minh họa -->
+    <p style="text-align: center; margin-top: 100px;">Đây là trang web demo về hiệu ứng loading.</p>
+</body>
+</html>
