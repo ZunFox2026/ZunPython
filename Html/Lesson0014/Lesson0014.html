@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Phần đầu của tài liệu, chứa thông tin về trang web -->
+    <title>Tạo hiệu ứng loading</title>
+    <style>
+        /* Phần CSS để thiết kế và tạo hiệu ứng */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        
+        .loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px;
+            height: 100px;
+            border: 10px solid #ccc;
+            border-top: 10px solid #3498db;
+            border-radius: 50%;
+            animation: loading 1s linear infinite;
+        }
+        
+        @keyframes loading {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+        
+        .content {
+            display: none;
+        }
+        
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Phần nội dung của trang web -->
+    <div class="loading"></div>
+    <div class="content" id="content">
+        <h1>Nội dung của trang web</h1>
+        <p>Đây là nội dung của trang web. Hãy đợi một chút để nội dung được tải.</p>
+        <button onclick="hideLoading()">Hide Loading</button>
+        <button onclick="showLoading()">Show Loading</button>
+    </div>
+    
+    <script>
+        // Hàm để ẩn hiện hiệu ứng loading
+        function hideLoading() {
+            document.querySelector('.loading').style.display = 'none';
+            document.querySelector('.content').classList.add('show');
+        }
+        
+        function showLoading() {
+            document.querySelector('.loading').style.display = 'block';
+            document.querySelector('.content').classList.remove('show');
+        }
+    </script>
+</body>
+</html>
