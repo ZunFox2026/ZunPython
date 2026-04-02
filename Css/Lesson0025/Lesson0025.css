@@ -1,0 +1,101 @@
+/* Bài 25: Tìm hiểu về thuộc tính Z-index */
+/* Giới thiệu về thuộc tính Z-index */
+/* Z-index là thuộc tính dùng để xác định thứ tự chồng chất của các phần tử trong một trang web */
+/* Giá trị của Z-index là một số nguyên, số càng cao thì phần tử càng được hiển thị trên cùng */
+
+/* Ví dụ 1: Sử dụng Z-index với các phần tử block */
+.block {
+  /* Thuộc tính position phải được thiết lập để sử dụng Z-index */
+  position: relative;
+  /* Định nghĩa kích thước và màu nền cho các phần tử block */
+  width: 200px;
+  height: 200px;
+  background-color: #f2f2f2;
+  /* Thêm border và padding cho phần tử */
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.block1 {
+  /* Z-index thấp nhất */
+  z-index: 1;
+  background-color: #ff0000;
+}
+
+.block2 {
+  /* Z-index cao hơn block1 */
+  z-index: 2;
+  background-color: #00ff00;
+  /* Di chuyển phần tử block2 lên trên block1 */
+  top: -50px;
+  left: 50px;
+}
+
+.block3 {
+  /* Z-index cao nhất */
+  z-index: 3;
+  background-color: #0000ff;
+  /* Di chuyển phần tử block3 lên trên block2 */
+  top: -100px;
+  left: 100px;
+}
+
+/* Ví dụ 2: Sử dụng Z-index với các phần tử inline-block */
+.inline-block {
+  /* Thuộc tính position phải được thiết lập để sử dụng Z-index */
+  position: relative;
+  /* Định nghĩa kích thước và màu nền cho các phần tử inline-block */
+  width: 100px;
+  height: 100px;
+  background-color: #f2f2f2;
+  /* Thêm border và padding cho phần tử */
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: inline-block;
+}
+
+.inline-block1 {
+  /* Z-index thấp nhất */
+  z-index: 1;
+  background-color: #ff0000;
+}
+
+.inline-block2 {
+  /* Z-index cao hơn inline-block1 */
+  z-index: 2;
+  background-color: #00ff00;
+  /* Di chuyển phần tử inline-block2 lên trên inline-block1 */
+  top: -20px;
+  left: 20px;
+}
+
+/* Ví dụ 3: Sử dụng Z-index với các phần tử tuyệt đối */
+.absolute {
+  /* Thuộc tính position phải được thiết lập để sử dụng Z-index */
+  position: absolute;
+  /* Định nghĩa kích thước và màu nền cho các phần tử tuyệt đối */
+  width: 150px;
+  height: 150px;
+  background-color: #f2f2f2;
+  /* Thêm border và padding cho phần tử */
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.absolute1 {
+  /* Z-index thấp nhất */
+  z-index: 1;
+  background-color: #ff0000;
+  top: 0;
+  left: 0;
+}
+
+.absolute2 {
+  /* Z-index cao hơn absolute1 */
+  z-index: 2;
+  background-color: #00ff00;
+  top: 50px;
+  left: 50px;
+}
+
+/* Kết thúc bài học về thuộc tính Z-index */
