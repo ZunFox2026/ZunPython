@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- Đây là khai báo loại tài liệu, thông báo cho trình duyệt rằng đây là một trang HTML -->
+<html>
+<!-- Đây là thẻ gốc của tài liệu HTML -->
+<head>
+    <!-- Thẻ head chứa thông tin về trang web, bao gồm tiêu đề, phong cách, tập lệnh, v.v. -->
+    <title>Tạo hình nền động</title>
+    <!-- Tiêu đề của trang web, hiển thị trên tab trình duyệt -->
+    <style>
+        /* Đây là phong cách CSS cho trang web */
+        body {
+            /* Tạo hình nền động bằng cách sử dụng thuộc tính background-image và animation */
+            background-image: linear-gradient(to right, #ff69b4, #ffe6cc, #ffff99, #ccffcc, #ff69b4);
+            background-size: 400% 400%;
+            animation: gradient 10s ease infinite;
+        }
+        
+        @keyframes gradient {
+            /* Định nghĩa animation cho hình nền động */
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Thẻ body chứa nội dung của trang web -->
+    <!-- Nội dung trang web -->
+    <h1 style="color: #ffffff; text-align: center; padding-top: 20%;">Tạo hình nền động</h1>
+    <!-- Tiêu đề trang web, màu trắng, căn giữa, lề trên 20% -->
+    <p style="color: #ffffff; text-align: center; font-size: 24px;">Hình nền động được tạo bằng cách sử dụng thuộc tính background-image và animation trong CSS.</p>
+    <!-- Đoạn văn trang web, màu trắng, căn giữa, kích thước chữ 24px -->
+</body>
+</html>
