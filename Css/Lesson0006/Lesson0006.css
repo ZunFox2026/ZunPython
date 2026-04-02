@@ -1,0 +1,74 @@
+/* Bài 6: Tạo hình dạng hình học với CSS */
+/* Sử dụng border để tạo hình dạng hình học */
+.vuong {
+  /* Tạo hình vuông */
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+}
+
+.tron {
+  /* Tạo hình tròn */
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.chunhat {
+  /* Tạo hình chữ nhật */
+  width: 200px;
+  height: 100px;
+  border: 1px solid black;
+}
+
+/* Sử dụng clip-path để tạo hình dạng hình học */
+.clip-path-vuong {
+  /* Tạo hình vuông */
+  width: 100px;
+  height: 100px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  background-color: blue;
+}
+
+.clip-path-tron {
+  /* Tạo hình tròn */
+  width: 100px;
+  height: 100px;
+  clip-path: circle(50% at 50% 50%);
+  background-color: red;
+}
+
+.clip-path-chunhat {
+  /* Tạo hình chữ nhật */
+  width: 200px;
+  height: 100px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  background-color: green;
+}
+
+/* Sử dụng transform để tạo hình dạng hình học */
+.transform-vuong {
+  /* Tạo hình vuông */
+  width: 100px;
+  height: 100px;
+  transform: rotate(45deg);
+  border: 1px solid black;
+}
+
+.transform-tron {
+  /* Tạo hình tròn */
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transform: rotate(45deg);
+  border: 1px solid black;
+}
+
+.transform-chunhat {
+  /* Tạo hình chữ nhật */
+  width: 200px;
+  height: 100px;
+  transform: rotate(45deg);
+  border: 1px solid black;
+}
