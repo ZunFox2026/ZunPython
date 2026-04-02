@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <!-- Định nghĩa kiểu dáng và tiêu đề cho trang web -->
+    <title>Tạo hiệu ứng Loading</title>
+    <style>
+        /* Định nghĩa kiểu dáng cho body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        
+        /* Định nghĩa kiểu dáng cho phần loading */
+        .loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px;
+            height: 100px;
+            border: 10px solid #ccc;
+            border-top: 10px solid #3498db;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        /* Định nghĩa hiệu ứng spin cho phần loading */
+        @keyframes spin {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+        
+        /* Định nghĩa kiểu dáng cho phần nội dung */
+        .content {
+            display: none;
+            text-align: center;
+            padding-top: 20px;
+        }
+        
+        /* Định nghĩa kiểu dáng cho nút bấm */
+        .btn {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        /* Định nghĩa kiểu dáng cho nút bấm khi di chuột */
+        .btn:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+    <!-- Tạo phần loading -->
+    <div class="loading"></div>
+    
+    <!-- Tạo phần nội dung -->
+    <div class="content">
+        <!-- Tạo tiêu đề cho phần nội dung -->
+        <h1>Chào mừng đến với trang web của chúng tôi!</h1>
+        
+        <!-- Tạo nút bấm để ẩn hiện phần loading -->
+        <button class="btn" onclick="hideLoading()">Ẩn loading</button>
+        <button class="btn" onclick="showLoading()">Hiện loading</button>
+    </div>
+    
+    <!-- Tạo script để ẩn hiện phần loading -->
+    <script>
+        // Hàm ẩn phần loading và hiện phần nội dung
+        function hideLoading() {
+            document.querySelector('.loading').style.display = 'none';
+            document.querySelector('.content').style.display = 'block';
+        }
+        
+        // Hàm hiện phần loading và ẩn phần nội dung
+        function showLoading() {
+            document.querySelector('.loading').style.display = 'block';
+            document.querySelector('.content').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
