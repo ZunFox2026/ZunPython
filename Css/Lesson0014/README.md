@@ -1,55 +1,44 @@
-# Tính nhất quán trong thiết kế
+# Tìm hiểu về Media Queries
 ## Giới thiệu
-Tính nhất quán trong thiết kế là yếu tố quan trọng quyết định sự thành công của một dự án thiết kế. Nhất quán giúp tạo ra sự đồng bộ và thống nhất trong giao diện, giúp người dùng dễ dàng sử dụng và nhận diện thương hiệu. Trong bài viết này, chúng ta sẽ tìm hiểu về tính nhất quán trong thiết kế, lý thuyết và ví dụ minh họa.
+Media Queries là một tính năng trong CSS cho phép bạn áp dụng các phong cách khác nhau dựa trên các điều kiện cụ thể của thiết bị hoặc trình duyệt. Điều này giúp bạn tạo ra các trang web đáp ứng, có thể thích nghi với nhiều loại thiết bị và kích thước màn hình khác nhau. Với Media Queries, bạn có thể kiểm soát cách hiển thị của trang web trên desktop, laptop, tablet, smartphone, v.v.
 
 ## Lý thuyết
-Tính nhất quán trong thiết kế bao gồm nhiều yếu tố như màu sắc, phông chữ, kích thước, khoảng cách,... Để tạo ra tính nhất quán, chúng ta cần định nghĩa rõ ràng các yếu tố này và sử dụng chúng một cách thống nhất trong toàn bộ dự án. Ví dụ, nếu chúng ta chọn màu sắc chính là xanh biển, chúng ta nên sử dụng màu này cho tất cả các nút bấm, tiêu đề, và các yếu tố khác. Chúng ta cũng nên chọn một phông chữ duy nhất và sử dụng nó cho tất cả các văn bản.
+Media Queries sử dụng cú pháp `@media` để định nghĩa các khối phong cách sẽ được áp dụng khi đáp ứng một hoặc nhiều điều kiện nhất định. Các điều kiện này thường liên quan đến kích thước màn hình, hướng màn hình (đứng hoặc ngang), độ phân giải, v.v. Ví dụ, bạn có thể sử dụng `@media (max-width: 768px)` để áp dụng các phong cách cho các thiết bị có chiều rộng màn hình tối đa là 768 pixel, thường tương ứng với các thiết bị di động.
 
-Ví dụ về CSS minh họa tính nhất quán:
 ```css
-body {
-  font-family: Arial, sans-serif;
-  color: #333;
-}
-
-h1, h2, h3 {
-  color: #007bff;
-}
-
-button {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
 }
 ```
-Trong ví dụ trên, chúng ta định nghĩa phông chữ và màu sắc cho toàn bộ trang web, và sử dụng màu xanh biển (#007bff) cho các tiêu đề và nút bấm.
+
+Trong ví dụ trên, khi trang web được truy cập từ một thiết bị có chiều rộng màn hình tối đa là 768 pixel, kích thước font của phần tử `body` sẽ được thiết lập thành 16 pixel.
 
 ## Ví dụ
-Một ví dụ khác về tính nhất quán trong thiết kế là sử dụng khoảng cách và padding một cách thống nhất. Ví dụ, nếu chúng ta đặt khoảng cách giữa các phần tử là 20px, chúng ta nên sử dụng khoảng cách này cho tất cả các phần tử.
+Một ví dụ khác về việc sử dụng Media Queries để thay đổi bố cục của một trang web dựa trên chiều rộng màn hình. Giả sử bạn muốn bố cục của trang web trở nên đơn giản hơn trên các thiết bị di động.
 
-Ví dụ về CSS minh họa tính nhất quán về khoảng cách:
 ```css
+/* Phong cách mặc định cho desktop */
 .container {
-  padding: 20px;
-  margin: 20px;
+  display: flex;
+  flex-direction: row;
 }
 
-.item {
-  padding: 10px;
-  margin: 10px;
+/* Thay đổi phong cách cho mobile */
+@media (max-width: 480px) {
+  .container {
+    flex-direction: column;
+  }
 }
 ```
-Trong ví dụ trên, chúng ta định nghĩa khoảng cách và padding cho các phần tử container và item, và sử dụng chúng một cách thống nhất trong toàn bộ dự án.
+
+Trong ví dụ này, trên các thiết bị di động có chiều rộng màn hình tối đa là 480 pixel, các phần tử con trong phần tử `.container` sẽ được sắp xếp theo chiều dọc thay vì chiều ngang như trên desktop.
 
 ## Bài tập
-Bài tập cho bạn là tạo ra một trang web đơn giản với tính nhất quán trong thiết kế. Bạn cần định nghĩa các yếu tố như màu sắc, phông chữ, kích thước, khoảng cách,... và sử dụng chúng một cách thống nhất trong toàn bộ dự án. Bạn có thể sử dụng CSS để định nghĩa các yếu tố này và áp dụng chúng cho các phần tử trên trang web.
+Bài tập cho bạn: Tạo một trang web đơn giản với một phần tiêu đề và một phần nội dung. Sử dụng Media Queries để thay đổi kích thước font của tiêu đề và màu nền của trang web dựa trên chiều rộng màn hình. Cụ thể:
+- Trên desktop (chiều rộng màn hình > 1024px), tiêu đề có kích thước font là 36px và màu nền là xanh lá cây.
+- Trên tablet (chiều rộng màn hình từ 768px đến 1024px), tiêu đề có kích thước font là 24px và màu nền là vàng.
+- Trên mobile (chiều rộng màn hình < 768px), tiêu đề có kích thước font là 18px và màu nền là đỏ.
 
-Một số gợi ý cho bài tập:
-
-* Định nghĩa màu sắc chính và sử dụng nó cho các tiêu đề và nút bấm
-* Chọn một phông chữ duy nhất và sử dụng nó cho tất cả các văn bản
-* Sử dụng khoảng cách và padding một cách thống nhất cho các phần tử
-* Tạo ra một trang web với ít nhất 3 phần tử khác nhau (tiêu đề, văn bản, nút bấm,...) và áp dụng tính nhất quán trong thiết kế cho chúng.
+Thử nghiệm và quan sát cách trang web của bạn thay đổi khi bạn điều chỉnh kích thước cửa sổ trình duyệt hoặc truy cập từ các thiết bị khác nhau.
