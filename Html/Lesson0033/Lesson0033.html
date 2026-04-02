@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Thẻ tiêu đề của trang web -->
+    <title>Tạo hiệu ứng loading</title>
+    <!-- Thẻ liên kết đến stylesheet (nếu có) -->
+    <style>
+        /* CSS cho trang web */
+        body {
+            /* Cài đặt font và màu nền cho trang web */
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        /* Tạo hiệu ứng loading */
+        .loading {
+            /* Cài đặt vị trí và kích thước cho hiệu ứng loading */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px;
+            height: 100px;
+            /* Cài đặt màu sắc và đường viền cho hiệu ứng loading */
+            border: 10px solid #3498db;
+            border-top: 10px solid #e74c3c;
+            border-radius: 50%;
+            /* Tạo hiệu ứng quay cho loading */
+            animation: loading 2s linear infinite;
+        }
+        /* Tạo hiệu ứng quay cho loading */
+        @keyframes loading {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Thẻ div để chứa hiệu ứng loading -->
+    <div class="loading"></div>
+    <!-- Thẻ h1 để hiển thị tiêu đề của trang web -->
+    <h1 style="text-align: center; margin-top: 150px;">Tạo hiệu ứng loading</h1>
+    <!-- Thẻ p để hiển thị nội dung của trang web -->
+    <p style="text-align: center;">Đây là một trang web mẫu để minh họa hiệu ứng loading.</p>
+</body>
+</html>
