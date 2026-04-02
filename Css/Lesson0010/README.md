@@ -1,51 +1,58 @@
-# Tạo Hình Nền
-Bài 10: Tạo Hình Nền là một phần quan trọng trong khóa học Cơ bản về CSS. Trong bài này, chúng ta sẽ tìm hiểu cách tạo hình nền cho trang web của mình bằng cách sử dụng các thuộc tính CSS.
+# Media Query
+Bài học này sẽ giới thiệu về Media Query, một tính năng quan trọng trong CSS giúp chúng ta tạo ra các trang web đáp ứng (responsive) trên nhiều thiết bị và kích thước màn hình khác nhau.
 
 ## Giới thiệu
-Hình nền là một phần quan trọng của thiết kế web, giúp tạo ấn tượng và thu hút người dùng. Với CSS, chúng ta có thể tạo hình nền dễ dàng và linh hoạt. Bài này sẽ giới thiệu các phương pháp tạo hình nền cơ bản và cung cấp ví dụ minh họa.
+Media Query là một kỹ thuật trong CSS cho phép chúng ta áp dụng các kiểu dáng (styles) khác nhau dựa trên các điều kiện cụ thể của thiết bị hoặc môi trường mà trang web đang được hiển thị. Điều này giúp chúng ta tạo ra các trang web có thể thích nghi với nhiều loại thiết bị, từ điện thoại di động đến máy tính bảng, laptop và thậm chí là máy tính để bàn. Với Media Query, chúng ta có thể kiểm soát cách thức hiển thị của trang web trên các thiết bị có kích thước màn hình, độ phân giải, hướng hiển thị (landscape hoặc portrait) khác nhau.
 
 ## Lý thuyết
-Để tạo hình nền, chúng ta sử dụng thuộc tính `background` trong CSS. Thuộc tính này cho phép chúng ta đặt hình ảnh hoặc màu sắc làm hình nền cho phần tử HTML. Dưới đây là một số ví dụ về cách sử dụng thuộc tính `background`:
-- `background-color`: đặt màu sắc cho hình nền
-- `background-image`: đặt hình ảnh cho hình nền
-- `background-repeat`: đặt cách hình nền được lặp lại
-- `background-position`: đặt vị trí của hình nền
-
-Ví dụ:
+Để sử dụng Media Query, chúng ta cần sử dụng cú pháp `@media` trong CSS. Cú pháp cơ bản của Media Query như sau:
 ```css
-body {
-  background-color: #f2f2f2; /* đặt màu sắc cho hình nền */
-  background-image: url('hinhnen.jpg'); /* đặt hình ảnh cho hình nền */
-  background-repeat: no-repeat; /* không lặp lại hình nền */
-  background-position: center; /* đặt vị trí của hình nền */
+@media (điều kiện) {
+  /* Các kiểu dáng CSS sẽ được áp dụng khi điều kiện được đáp ứng */
 }
 ```
+Trong đó, `điều kiện` có thể là một trong nhiều loại điều kiện khác nhau, chẳng hạn như `max-width`, `min-width`, `max-height`, `min-height`, `orientation`, v.v. Ví dụ:
+```css
+@media (max-width: 768px) {
+  /* Các kiểu dáng CSS sẽ được áp dụng khi chiều rộng màn hình không vượt quá 768px */
+  body {
+    font-size: 16px;
+  }
+}
+```
+Điều này có nghĩa là khi chiều rộng màn hình không vượt quá 768px (ví dụ như trên điện thoại di động hoặc máy tính bảng), font-size của toàn bộ trang web sẽ được thiết lập là 16px.
 
 ## Ví dụ
-Chúng ta có thể tạo một trang web đơn giản với hình nền như sau:
+Dưới đây là ví dụ về việc sử dụng Media Query để tạo ra một trang web đáp ứng:
 ```css
+/* Kiểu dáng mặc định cho trang web */
 body {
-  background-image: url('hinhnen.jpg');
-  background-size: cover; /* đặt kích thước hình nền */
-  background-attachment: fixed; /* cố định hình nền khi cuộn trang */
+  font-size: 18px;
+  background-color: #f2f2f2;
 }
 
-.container {
-  width: 80%;
-  margin: 40px auto;
-  background-color: #fff;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+/* Áp dụng kiểu dáng cho màn hình có chiều rộng không vượt quá 768px */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+    background-color: #ccc;
+  }
+}
+
+/* Áp dụng kiểu dáng cho màn hình có chiều rộng không vượt quá 480px */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+    background-color: #aaa;
+  }
 }
 ```
-Trong ví dụ này, chúng ta tạo một trang web với hình nền là hình ảnh `hinhnen.jpg`. Chúng ta cũng tạo một phần tử `.container` với màu sắc và hiệu ứng bóng đổ.
+Trong ví dụ này, chúng ta có ba kiểu dáng khác nhau cho trang web dựa trên chiều rộng màn hình: mặc định (18px và #f2f2f2), cho màn hình có chiều rộng không vượt quá 768px (16px và #ccc), và cho màn hình có chiều rộng không vượt quá 480px (14px và #aaa).
 
 ## Bài tập
-Bài tập này yêu cầu bạn tạo một trang web với hình nền là hình ảnh mà bạn chọn. Bạn cần:
-- Tạo một file HTML và thêm phần tử `body`
-- Tạo một file CSS và thêm thuộc tính `background` cho phần tử `body`
-- Thêm hình ảnh làm hình nền và đặt các thuộc tính `background-repeat`, `background-position` và `background-size` cho phù hợp
-- Tạo một phần tử `.container` với màu sắc và hiệu ứng bóng đổ như trong ví dụ trên
-- Thử nghiệm với các thuộc tính `background` khác nhau để tạo ra các hiệu ứng hình nền khác nhau.
+Bài tập này yêu cầu bạn tạo ra một trang web đơn giản có thể thích nghi với nhiều loại thiết bị. Yêu cầu cụ thể như sau:
+- Tạo một trang web có tiêu đề, đoạn văn và nút bấm.
+- Sử dụng Media Query để áp dụng các kiểu dáng khác nhau cho trang web dựa trên chiều rộng màn hình:
+  - Đối với màn hình có chiều rộng không vượt quá 768px, thiết lập font-size của tiêu đề là 20px và đoạn văn là 16px.
+  - Đối với màn hình có chiều rộng không vượt quá 480px, thiết lập font-size của tiêu đề là 18px và đoạn văn là 14px.
+- Thử nghiệm trang web của bạn trên các thiết bị khác nhau hoặc sử dụng công cụ phát triển của trình duyệt để xem kết quả.
