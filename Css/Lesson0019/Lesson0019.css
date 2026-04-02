@@ -1,0 +1,61 @@
+/* Bài 19: Tìm hiểu về Shadow */
+/* Phần này sẽ giới thiệu về thuộc tính box-shadow và text-shadow trong CSS */
+
+/* Ví dụ 1: Sử dụng box-shadow để tạo bóng cho các phần tử */
+.box-shadow-example {
+  /* Thuộc tính box-shadow có 4 giá trị: màu, offset-x, offset-y, blur-radius */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 200px;
+  height: 200px;
+  background-color: #f0f0f0;
+  margin: 20px;
+}
+
+/* Ví dụ 2: Sử dụng box-shadow với nhiều giá trị khác nhau */
+.box-shadow-example-2 {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5), 
+              -5px -5px 10px rgba(0, 0, 0, 0.2);
+  width: 200px;
+  height: 200px;
+  background-color: #f0f0f0;
+  margin: 20px;
+}
+
+/* Ví dụ 3: Sử dụng text-shadow để tạo bóng cho văn bản */
+.text-shadow-example {
+  /* Thuộc tính text-shadow có 4 giá trị: màu, offset-x, offset-y, blur-radius */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  font-size: 36px;
+  color: #666;
+}
+
+/* Ví dụ 4: Sử dụng text-shadow với nhiều giá trị khác nhau */
+.text-shadow-example-2 {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), 
+               -2px -2px 5px rgba(0, 0, 0, 0.2);
+  font-size: 36px;
+  color: #666;
+}
+
+/* Phần này sẽ giới thiệu về việc sử dụng box-shadow và text-shadow trong các tình huống thực tế */
+/* Ví dụ 5: Sử dụng box-shadow và text-shadow cho các nút bấm */
+.button {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Ví dụ 6: Sử dụng box-shadow và text-shadow cho các thẻ tiêu đề */
+.header {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
