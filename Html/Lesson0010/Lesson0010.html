@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- Khai báo loại tài liệu HTML -->
+<html>
+  <!-- Thẻ gốc của tài liệu HTML -->
+  <head>
+    <!-- Phần đầu của tài liệu HTML, chứa thông tin về trang web -->
+    <title>Tạo hiệu ứng hình ảnh</title>
+    <!-- Tiêu đề của trang web -->
+    <style>
+      /* CSS viết trong thẻ style để tạo kiểu cho trang web */
+      body {
+        /* Thiết lập màu nền và font cho trang web */
+        background-color: #f2f2f2;
+        font-family: Arial, sans-serif;
+      }
+      .hinh-anh {
+        /* Tạo lớp CSS cho hình ảnh */
+        width: 300px;
+        height: 200px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        transition: all 0.5s ease;
+      }
+      .hinh-anh:hover {
+        /* Tạo hiệu ứng khi di chuột qua hình ảnh */
+        transform: scale(1.1);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Phần nội dung của trang web -->
+    <h1>Tạo hiệu ứng hình ảnh</h1>
+    <!-- Tiêu đề của trang web -->
+    <p>Đây là một ví dụ về tạo hiệu ứng hình ảnh khi di chuột qua.</p>
+    <!-- Đoạn văn giới thiệu -->
+    <img class="hinh-anh" src="https://picsum.photos/300/200" alt="Hình ảnh mẫu">
+    <!-- Hình ảnh được áp dụng hiệu ứng -->
+    <p>Khi di chuột qua hình ảnh, hình ảnh sẽ được phóng to và có bóng đổ.</p>
+    <!-- Đoạn văn giải thích hiệu ứng -->
+  </body>
+</html>
