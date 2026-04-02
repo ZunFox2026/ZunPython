@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- Đây là khai báo loại tài liệu HTML5 -->
+<html>
+<!-- Đây là phần bắt đầu của tài liệu HTML -->
+<head>
+    <!-- Phần này chứa thông tin về trang web, bao gồm cả stylesheet -->
+    <title>Tạo hiệu ứng Parallax</title>
+    <!-- Tiêu đề của trang web -->
+    <style>
+        /* Phần này chứa các quy tắc CSS để tạo hiệu ứng Parallax */
+        body {
+            margin: 0;
+            padding: 0;
+            /* Loại bỏ khoảng cách mặc định của trình duyệt */
+        }
+        .parallax {
+            /* Tạo một lớp có hiệu ứng Parallax */
+            background-image: url('https://picsum.photos/2000/1000');
+            /* Đường dẫn đến hình nền */
+            background-attachment: fixed;
+            /* Hiệu ứng Parallax: hình nền sẽ không di chuyển khi cuộn trang */
+            background-size: cover;
+            /* Kích thước hình nền sẽ phủ kín phần tử */
+            height: 100vh;
+            /* Chiều cao của phần tử sẽ chiếm toàn bộ chiều cao của trình duyệt */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            /* Căn giữa văn bản và đổi màu văn bản thành trắng */
+        }
+        .content {
+            /* Tạo một lớp cho nội dung */
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Màu nền mờ để đọc dễ hơn */
+            padding: 20px;
+            /* Khoảng cách giữa văn bản và mép ngoài */
+            border-radius: 10px;
+            /* Bo góc phần tử */
+        }
+    </style>
+</head>
+<body>
+    <!-- Phần này chứa nội dung của trang web -->
+    <div class="parallax">
+        <!-- Phần này sẽ có hiệu ứng Parallax -->
+        <div class="content">
+            <!-- Nội dung sẽ được hiển thị trên hình nền -->
+            <h1>Hiệu ứng Parallax</h1>
+            <p>Đây là một trang web mẫu để minh họa hiệu ứng Parallax. Khi bạn cuộn trang, hình nền sẽ không di chuyển, tạo ra một hiệu ứng thú vị.</p>
+        </div>
+    </div>
+    <div style="height: 1000px; background-color: #f0f0f0;">
+        <!-- Phần này chỉ để tạo chiều cao cho trang, giúp minh họa hiệu ứng Parallax -->
+    </div>
+</body>
+</html>
