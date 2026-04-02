@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <!-- Thông tin về trang web -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo hiệu ứng Scrollbar tùy chỉnh</title>
+    <style>
+        /* Định dạng chung cho trang web */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        
+        /* Tạo container để minh họa hiệu ứng scrollbar */
+        .container {
+            width: 500px;
+            height: 300px;
+            overflow-y: auto; /* Tạo scrollbar khi nội dung vượt quá chiều cao */
+            background-color: #fff;
+            margin: 40px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        /* Tùy chỉnh hiệu ứng scrollbar */
+        .container::-webkit-scrollbar {
+            width: 10px; /* Độ rộng của scrollbar */
+            height: 10px; /* Độ cao của scrollbar */
+        }
+        
+        .container::-webkit-scrollbar-thumb {
+            background-color: #4CAF50; /* Màu sắc của thanh scrollbar */
+            border-radius: 10px; /* Bo góc cho thanh scrollbar */
+        }
+        
+        .container::-webkit-scrollbar-thumb:hover {
+            background-color: #3e8e41; /* Màu sắc khi di chuột qua thanh scrollbar */
+        }
+        
+        .container::-webkit-scrollbar-track {
+            background-color: #f2f2f2; /* Màu sắc của nền scrollbar */
+        }
+        
+        /* Nội dung minh họa */
+        .content {
+            height: 1000px; /* Chiều cao nội dung để tạo scrollbar */
+            background-image: linear-gradient(to bottom, #ff99cc, #ffffcc);
+        }
+    </style>
+</head>
+<body>
+    <!-- Container để minh họa hiệu ứng scrollbar -->
+    <div class="container">
+        <!-- Nội dung minh họa -->
+        <div class="content">
+            <!-- Thêm nội dung để tạo chiều cao và kích hoạt scrollbar -->
+            <h2>Nội dung minh họa</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+        </div>
+    </div>
+</body>
+</html>
